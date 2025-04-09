@@ -5,9 +5,8 @@ build:
 	docker-compose build
 
 # Start the containers defined in docker-compose.yml
-# TODO:
 up:
-
+	docker-compose run --rm app
 
 # Down the containers defined in docker-compose.yml
 down:
