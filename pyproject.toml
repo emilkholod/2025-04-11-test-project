@@ -1,0 +1,40 @@
+[project]
+name = "freelancer_analyzer_app"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Холоднов Эмиль",email = "emil.kholod@gmail.com"}
+]
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+
+[tool.isort]
+profile = "black"
+filter_files = true
+line_length = 88
+src_paths = "./src"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = [
+    "DC100", "D100",
+]
+exclude = [
+    ".git",
+    "__pycache__",
+]
+inline-quotes = '"'
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
