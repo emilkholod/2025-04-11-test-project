@@ -4,6 +4,8 @@ services:
       context: .
       args:
         - ENV=dev
+    env_file:
+      - .env
     volumes:
       - ./src:/app/src/
       - ./tests:/app/tests/

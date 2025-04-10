@@ -1,4 +1,7 @@
-.PHONY: build up down test sh prod
+.PHONY: setup build up down test sh prod
+
+setup:
+	@if [ ! -f .env ]; then cp .env.template .env; fi
 
 # Build the Docker images defined in docker-compose.yml
 build:
