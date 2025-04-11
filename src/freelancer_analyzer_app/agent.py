@@ -1,20 +1,16 @@
 from typing import cast
 
 from langchain.agents import AgentExecutor
-from langchain.schema import HumanMessage, SystemMessage
+from langchain.schema import HumanMessage
 
 
 class Agent:
-    def __init__(self, agent: AgentExecutor, language: str = "EN"):
+    def __init__(self, agent: AgentExecutor):
         self.agent = agent
-        self.language = language
 
     def get_response(self, question: str) -> str:
         response = self.agent.invoke(
             [
-                SystemMessage(
-                    content=(f"Use {self.language} language to answer questions"),
-                ),
                 HumanMessage(content=question),
             ]
         )

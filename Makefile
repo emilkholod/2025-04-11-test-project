@@ -8,7 +8,7 @@ build:
 	docker-compose build
 
 # Start the containers defined in docker-compose.yml
-up:
+run:
 	docker-compose run --rm app
 
 # Down the containers defined in docker-compose.yml

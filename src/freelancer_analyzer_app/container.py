@@ -28,8 +28,7 @@ class AppProvider(Provider):
             allow_dangerous_code=True,
             verbose=settings.CHAT_SETTINGS.VERBOSE_AGENT,
         )
-        language = settings.CHAT_SETTINGS.LANGUAGE
-        return Agent(agent, language)
+        return Agent(agent)
 
     @provide
     def df(self, settings: Settings) -> pd.DataFrame:

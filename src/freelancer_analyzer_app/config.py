@@ -6,7 +6,6 @@ class ChatSettings(BaseSettings):
 
     API_URL: str = ""
     API_KEY: str = ""
-    LANGUAGE: str = "EN"
     VERBOSE_AGENT: bool = False
 
 
