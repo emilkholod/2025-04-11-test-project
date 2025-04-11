@@ -24,5 +24,5 @@ sh:
 	docker-compose run --rm app sh
 
 # Build prod image and then you can push to docker repository
-# TODO:
 prod:
+	docker build --tag freelancer_analyzer_app:latest .
