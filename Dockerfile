@@ -41,5 +41,4 @@ COPY ./raw_data/ ./raw_data
 ENV PYTHONPATH="/app/src"
 ENV PATH="/app/.venv/bin:$PATH"
 
-EXPOSE 8000
 CMD ["python", "-m", "freelancer_analyzer_app"]
