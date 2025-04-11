@@ -20,6 +20,8 @@ def app(context: click.Context) -> None:
     response_console = get_response_console()
     info_console = get_info_console()
 
+    info_console.print("\nОтправьте пустой запрос, чтобы выйти из приложения\n")
+
     while True:
         info_console.print("-" * 80)
         question = info_console.input("Введите запрос: ")
